@@ -44,7 +44,6 @@ the request came in via HTTPS, and you’ll want to set SECURE_PROXY_SSL_HEADER 
 
 ``` python
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-)
 ```
 
 
