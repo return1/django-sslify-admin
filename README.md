@@ -40,7 +40,7 @@ If your Django app is behind a proxy (like Heroku), though, the proxy may be “
 connection between the proxy and Django.
 
 In this situation, you’ll want to configure the proxy (Heroku already does that for you) to set a custom HTTP header that tells Django whether
-the request came in via HTTPS, and you’ll want to set ``SECURE_PROXY_SSL_HEADER`` so that Django knows what header to look for, like this:
+the request came in via HTTPS, and you’ll want to set ``SECURE_PROXY_SSL_HEADER` so that Django knows what header to look for, like this:
 
 ``` python
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
@@ -56,6 +56,8 @@ whole site, and not only the admin interface of Django.
 
 
 ## Tests
+
+[![Build Status](https://api.travis-ci.org/return1/django-sslify-admin.png?branch=master)](http://travis-ci.org/return1/django-sslify-admin)
 
 ``` bash
 $ git clone https://github.com/return1/django-sslify-admin.git
