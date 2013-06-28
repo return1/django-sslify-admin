@@ -12,8 +12,8 @@ class SSLifyAdminMiddleware(object):
 
     def process_request(self, request):
         sslify_admin_url = getattr(settings, 'SSLIFY_ADMIN_URL', 'admin/')
-        if request.path.startswith('/' + sslify_admin_url) and not any(
-                (settings.DEBUG, request.is_secure(), request.META.get('HTTP_X_FORWARDED_PROTO', '') == 'https')):
+        if request.path.startswith('/' + sslify_admin_url) and \
+                not (settings.DEBUG or request.is_secure()):
             url = request.build_absolute_uri(request.get_full_path())
             secure_url = url.replace('http://', 'https://')
             return HttpResponsePermanentRedirect(secure_url)
