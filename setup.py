@@ -7,7 +7,7 @@ setup(
 
     # Basic package information:
     name='django-sslify-admin',
-    version='0.1',
+    version='0.2',
     packages=('sslifyadmin',),
 
     # Packaging options:
