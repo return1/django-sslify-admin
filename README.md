@@ -27,11 +27,11 @@ request (over HTTP), they will be redirected to HTTPs before any actual
 processing happens.
 
 ### Custom admin url?
-If you are using a custom admin url, you have to set ``SSLIFY_ADMIN_URL`` in your ``settings.py``:
+If you are using a custom admin url, you have to set ``SSLIFY_ADMIN_NAMESPACE`` in your ``settings.py``:
 
 ``` python
-# SSLIFY_ADMIN_URL = "admin/" # default
-SSLIFY_ADMIN_URL = "myadminurl/" # custom
+# SSLIFY_ADMIN_NAMESPACE = "admin" # default
+SSLIFY_ADMIN_NAMESPACE = "myadminurl" # custom
 ```
 
 ### Behind a Proxy? (Heroku)

@@ -7,9 +7,10 @@ from django.conf import settings
 
 if not settings.configured:
     settings.configure(
-        INSTALLED_APPS=["sslifyadmin"],
+        INSTALLED_APPS=['sslifyadmin'],
+        ROOT_URLCONF='urls',
         DATABASES={"default": {"ENGINE": "django.db.backends.sqlite3"}},
-        SSLIFY_ADMIN_URL="adminxy/")
+    )
 
 
 def runtests(*test_args):
