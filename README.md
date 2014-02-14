@@ -24,7 +24,10 @@ MIDDLEWARE_CLASSES = (
 **NOTE**: Make sure ``sslify.middleware.SSLifyMiddleware`` is the first
 middleware class listed, as this will ensure that if a user makes an unsecure
 request (over HTTP), they will be redirected to HTTPs before any actual
-processing happens.
+processing happens. If you plan to use
+``[i18n_patterns](https://docs.djangoproject.com/en/dev/topics/i18n/translation/#django.conf.urls.i18n.i18n_patterns)``
+on admin urls, the this middleware needs to be appended AFTER
+``[django.middleware.locale.LocaleMiddleware](https://docs.djangoproject.com/en/dev/ref/middleware/#django.middleware.locale.LocaleMiddleware)``!
 
 ### Custom admin url?
 If you are using a custom admin url, you have to set ``SSLIFY_ADMIN_NAMESPACE`` in your ``settings.py``:
@@ -53,6 +56,8 @@ This code was taken and modified from [this StackOverflow
 thread](http://stackoverflow.com/questions/8436666/how-to-make-python-on-heroku-https-only).
 This Project is also influenced by Randall Degges [django-sslify](https://github.com/rdegges/django-sslify), use this, if you want to secure your
 whole site, and not only the admin interface of Django.
+
+If you like this project please consider giving me a [gittip](https://www.gittip.com/return1_at/), thanks! :)
 
 
 ## Tests
