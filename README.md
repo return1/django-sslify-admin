@@ -25,9 +25,9 @@ MIDDLEWARE_CLASSES = (
 middleware class listed, as this will ensure that if a user makes an unsecure
 request (over HTTP), they will be redirected to HTTPs before any actual
 processing happens. If you plan to use
-``[i18n_patterns](https://docs.djangoproject.com/en/dev/topics/i18n/translation/#django.conf.urls.i18n.i18n_patterns)``
+[``i18n_patterns``](https://docs.djangoproject.com/en/dev/topics/i18n/translation/#django.conf.urls.i18n.i18n_patterns)
 on admin urls, the this middleware needs to be appended AFTER
-``[django.middleware.locale.LocaleMiddleware](https://docs.djangoproject.com/en/dev/ref/middleware/#django.middleware.locale.LocaleMiddleware)``!
+[``django.middleware.locale.LocaleMiddleware``](https://docs.djangoproject.com/en/dev/ref/middleware/#django.middleware.locale.LocaleMiddleware)!
 
 ### Custom admin url?
 If you are using a custom admin url, you have to set ``SSLIFY_ADMIN_NAMESPACE`` in your ``settings.py``:
@@ -43,7 +43,7 @@ If your Django app is behind a proxy (like Heroku), though, the proxy may be “
 connection between the proxy and Django.
 
 In this situation, you’ll want to configure the proxy (Heroku already does that for you) to set a custom HTTP header that tells Django whether
-the request came in via HTTPS, and you’ll want to set ``SECURE_PROXY_SSL_HEADER` so that Django knows what header to look for, like this:
+the request came in via HTTPS, and you’ll want to set `SECURE_PROXY_SSL_HEADER` so that Django knows what header to look for, like this:
 
 ``` python
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
