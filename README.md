@@ -26,7 +26,7 @@ middleware class listed, as this will ensure that if a user makes an unsecure
 request (over HTTP), they will be redirected to HTTPs before any actual
 processing happens. If you plan to use
 [``i18n_patterns``](https://docs.djangoproject.com/en/dev/topics/i18n/translation/#django.conf.urls.i18n.i18n_patterns)
-on admin urls, the this middleware needs to be appended AFTER
+on admin urls, this middleware needs to be appended AFTER
 [``django.middleware.locale.LocaleMiddleware``](https://docs.djangoproject.com/en/dev/ref/middleware/#django.middleware.locale.LocaleMiddleware)!
 
 ### Custom admin url?
