@@ -19,6 +19,7 @@ MIDDLEWARE_CLASSES = (
     'sslifyadmin.middleware.SSLifyAdminMiddleware',
     # ...
 )
+```
 
 **NOTE**: Make sure ``sslify.middleware.SSLifyMiddleware`` is the first
 middleware class listed, as this will ensure that if a user makes an unsecure
