@@ -2,7 +2,7 @@ from os.path import abspath, dirname, join, normpath
 
 from setuptools import setup
 
-from sslify import __version__
+from sslifyadmin import __version__
 
 
 setup(
