@@ -47,7 +47,7 @@ Enabling/Disabling
 ~~~~~~~~~~~~~~~~~~
 
 By default, the admin is sslfying if settings.DEBUG is False, but for
-some reason you may want remove debugging and not trigger the sslify.
+some reason (ie. local, test suite) you may want remove debugging and not trigger the sslify.
 You have to set ``SSLIFY_ADMIN_DISABLE`` in your ``settings.py``:
 
 .. code:: python

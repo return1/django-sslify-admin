@@ -2,12 +2,14 @@ from os.path import abspath, dirname, join, normpath
 
 from setuptools import setup
 
+from sslify import __version__
+
 
 setup(
 
     # Basic package information:
     name='django-sslify-admin',
-    version='0.4',
+    version=__version__,
     packages=('sslifyadmin',),
 
     # Packaging options:
@@ -25,23 +27,26 @@ setup(
     keywords='django ssl https middleware admin',
     description='Force SSL on your Django admin site.',
     long_description=open(normpath(join(dirname(abspath(__file__)),
-                                        'README.md'))).read(),
+                                        'README.rst'))).read(),
     classifiers=[
-        "Development Status :: 3 - Alpha",
+        "Development Status :: 5 - Production/Stable",
         "Environment :: Web Environment",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
         "Programming Language :: Python",
-        "Programming Language :: Python :: 2",
-        "Programming Language :: Python :: 2.4",
-        "Programming Language :: Python :: 2.5",
         "Programming Language :: Python :: 2.6",
         "Programming Language :: Python :: 2.7",
+        'Programming Language :: Python :: 3.2',
+        'Programming Language :: Python :: 3.3',
+        'Programming Language :: Python :: Implementation :: CPython',
+        'Programming Language :: Python :: Implementation :: PyPy',
+        'Topic :: Internet :: WWW/HTTP :: WSGI :: Middleware',
+        'Topic :: Software Development :: Libraries :: Python Modules',
         "Framework :: Django",
     ],
 
-    tests_require = (
+    tests_require=(
         'django',
     ),
     test_suite='runtests.runtests',
