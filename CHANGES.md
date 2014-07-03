@@ -1,6 +1,11 @@
 CHANGES
 =======
 
+v0.4.0 (2014-06-03)
+-------------------
+
+* add extra setting SSLIFY_ADMIN_DISABLE (thanks to jraez)
+
 v0.3.0 (2014-02-06)
 -------------------
 

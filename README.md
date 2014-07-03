@@ -37,6 +37,14 @@ If you are using a custom admin url, you have to set ``SSLIFY_ADMIN_NAMESPACE`` 
 SSLIFY_ADMIN_NAMESPACE = "myadminurl" # custom
 ```
 
+### Enabling/Disabling
+By default, the admin is sslfying if settings.DEBUG is False, but for some reason you may want remove debugging and not trigger the sslify.
+You have to set ``SSLIFY_ADMIN_DISABLE`` in your ``settings.py``:
+
+``` python
+SSLIFY_ADMIN_DISABLE = True
+```
+
 ### Behind a Proxy? (Heroku)
 
 If your Django app is behind a proxy (like Heroku), though, the proxy may be “swallowing” the fact that a request is HTTPS, using a non-HTTPS
